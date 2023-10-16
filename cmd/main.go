@@ -51,7 +51,7 @@ func getNonExistantPath() string {
 
 func checkDirExists(dir string) {
 	cmd := exec.Command("ls", dir)
-	intResult, outStr, errStr := ashpalm.RunCmd(cmd, ".")
+	intResult, outStr, errStr := ashpalm.RunCmd(cmd)
 
 	slog.Debug("commmand output", "stdout", outStr)
 	slog.Debug("commmand error", "stderr", errStr)
